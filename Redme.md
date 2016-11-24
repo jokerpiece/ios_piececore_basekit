@@ -1,7 +1,7 @@
 ### pieceライブラリBaseKitのインストール
 
-Pieceの基本となる部品をライブラリにしました。
-Flyer、info、Shopping、Couponが利用可能です。
+Pieceの基本となる部品をライブラリにしました。  
+Flyer、info、Shopping、Couponが利用可能です。  
 フルパッケージよりも、ダウンロードが軽くなり、許可設定も少なくなります。
 
 CocoaPodを使用してインストールして下さい。  
@@ -69,28 +69,20 @@ AppDelegate.m
     
         [tabbarDataList addObject:[[TabbarData alloc]initWithViewController:
                                [[FlyerViewController alloc] initWithNibName:@"FlyerViewController" bundle:nil]
-                                                                imgName:@"icon_flyer.png"
-                                                          selectImgName:@"icon_flyer.png"
-                                                               tabTitle:@"Flyer"
+                                                                tabTitle:@"Flyer"
                                                                   title:@"FLYER"]];
     
         [tabbarDataList addObject:[[TabbarData alloc]initWithViewController:
                                [[InfoListViewController alloc] initWithNibName:@"InfoListViewController" bundle:nil]
-                                                                imgName:@"tab_icon_news.png"
-                                                          selectImgName:@"tab_icon_news.png"
-                                                               tabTitle:@"Info"
+                                                                tabTitle:@"Info"
                                                                   title:@"INFO"]];
         [tabbarDataList addObject:[[TabbarData alloc]initWithViewController:
                                [[CategoryViewController alloc] initWithNibName:@"CategoryViewController" bundle:nil]
-                                                                imgName:@"tab_icon_shopping.png"
-                                                          selectImgName:@"tab_icon_shopping.png"
-                                                               tabTitle:@"Shopping"
+                                                                tabTitle:@"Shopping"
                                                                   title:@"SHOPPING"]];
         [tabbarDataList addObject:[[TabbarData alloc]initWithViewController:
                                [[CouponViewController alloc] initWithNibName:@"CouponViewController" bundle:nil]
-                                                                imgName:@"tab_icon_coupon.png"
-                                                          selectImgName:@"tab_icon_coupon.png"
-                                                               tabTitle:@"Coupon"
+                                                                tabTitle:@"Coupon"
                                                                   title:@"COUPON"]];
 
     
@@ -108,3 +100,12 @@ Pieceで提供している機能と紐づくクラス名は下記の通りです
 | InfoListViewController　|お知らせ一覧|
 | CategoryViewController |ショッピング|
 | CouponViewController|クーポン|
+
+
+### その他
+- Build Settings > Enable BitcodeをNOにして下さい。  
+- info.plistに以下を追記します。  
+	 `<dict>`  
+        `<key>NSAllowsArbitraryLoads</key>`  
+        `<true/>`  
+    `</dict>`
