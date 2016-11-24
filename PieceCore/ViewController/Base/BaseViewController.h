@@ -34,4 +34,6 @@
 -(void)setSosialBtn;
 -(BOOL)openURL:(NSURL *)url;
 -(void)startTracking;
+-(void)showAlertWithTitle:(NSString*)title message:(NSString *)message cancelBtnTitle:(NSString*)cancelBtnTitle;
+-(void)cancelBtnAction;
 @end

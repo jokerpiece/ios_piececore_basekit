@@ -173,5 +173,25 @@
     return NO;
 }
 
+-(void)showAlertWithTitle:(NSString*)title message:(NSString *)message cancelBtnTitle:(NSString*)cancelBtnTitle otherBtnTitle:(NSString*)otherBtnTitle{
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:otherBtnTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        // 何もしない
+    }]];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:cancelBtnTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        // 設定画面へのURLスキーム
+        NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        [[UIApplication sharedApplication] openURL:url];
+    }]];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+-(void)cancelBtnAction{
+    
+}
 
 @end
