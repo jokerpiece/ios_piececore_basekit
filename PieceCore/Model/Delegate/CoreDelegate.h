@@ -42,5 +42,11 @@
 -(void)setThemeColor;
 -(void)setTabbarNumberWithVc:(BaseViewController *)vc index:(int)index;
 -(void)setGoogleAnalitics;
-
+- (void)setTabBarController;
+-(void)setPieceTitle;
+-(void)setPiecePageCode;
+-(void)setNavibarTitleAttributes;
+-(void)registDeviceToken;
+-(void)splashIntarval;
+-(void)moveScreenWithLaunchOptions:(NSDictionary *)launchOptions;
 @end

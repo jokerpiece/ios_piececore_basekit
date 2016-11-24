@@ -23,7 +23,6 @@
     
     [self setConfig];
     [self setGoogleAnalitics];
-    [self nex8SendOpenStatus];
     [self setPieceTitle];
     [self setPiecePageCode];
     [self setThemeColor];
@@ -55,13 +54,6 @@
     gai.logger.logLevel = kGAILogLevelVerbose;  // remove before app release
 }
 
-
--(void)nex8SendOpenStatus{
-    if ([Common isNotEmptyString:[PieceCoreConfig nex8Key]]) {
-//        self.nex8Tracker = [Nex8Tracking trackerWithSdkKey:[PieceCoreConfig nex8Key]];
-//        [self.nex8Tracker sendOpenedApp];
-    }
-}
 
 - (void)sendLocalNotificationForMessage:(NSString *)message
 {
