@@ -150,6 +150,7 @@
 		37949A6F1ABA9670002E5194 /* nextBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nextBtn@2x.png"; sourceTree = "<group>"; };
 		37949AA11ABFEEAE002E5194 /* BaseInputCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseInputCell.h; sourceTree = "<group>"; };
 		37949AA21ABFEEAE002E5194 /* BaseInputCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseInputCell.m; sourceTree = "<group>"; };
+		3795A0C91DF52E31008B424D /* pieceSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pieceSample.entitlements; sourceTree = "<group>"; };
 		37D758441AB1743800E6B421 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		37D758461AB175AF00E6B421 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		37D758531AB296CB00E6B421 /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
@@ -359,6 +360,7 @@
 		37E3EA541AA45F6800EA7CB9 /* pieceSample */ = {
 			isa = PBXGroup;
 			children = (
+				3795A0C91DF52E31008B424D /* pieceSample.entitlements */,
 				37E3EA591AA45F6800EA7CB9 /* AppDelegate.h */,
 				37E3EA5A1AA45F6800EA7CB9 /* AppDelegate.m */,
 				37E3EA5F1AA45F6800EA7CB9 /* Main.storyboard */,
@@ -806,6 +808,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					37E3EA6A1AA45F6800EA7CB9 = {
@@ -1128,6 +1133,7 @@
 			baseConfigurationReference = C67161BE5C2A5485E83051DE /* Pods-pieceSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = pieceSample/pieceSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -1145,6 +1151,7 @@
 			baseConfigurationReference = 435B62ED974602F156E050FE /* Pods-pieceSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = pieceSample/pieceSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
