@@ -63,8 +63,20 @@
         }
         
         UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imgName]];
-        iv.frame = CGRectMake(10, 20, 50, 50);
+        //        iv.frame = CGRectMake(10, 20, 50, 50);
+        
+        iv.frame = CGRectMake(13, 15, 50, 50);
         [cell.contentView addSubview:iv];
+        
+        
+        if(indexPath.row == 0){
+            //           UILabel *newLbl = [[UILabel alloc] initWithFrame:CGRectMake(275, 35, 50, 25)];
+            UILabel *newLbl = [[UILabel alloc] initWithFrame:CGRectMake(20, 58, 50, 25)];
+            newLbl.text = @"New!";
+            newLbl.font = [UIFont fontWithName:@"AppleGothic" size:15];
+            newLbl.textColor = [UIColor flatRedColor];
+            [cell.contentView addSubview:newLbl];
+        }
         
         UILabel *textLbl = [[UILabel alloc] initWithFrame:CGRectMake(80,10,200,80)];
         textLbl.text = data.title;
@@ -73,6 +85,16 @@
         textLbl.backgroundColor = [UIColor clearColor];
         textLbl.numberOfLines = 4;
         [cell.contentView addSubview:textLbl];
+        
+        UILabel *dataLbl = [[UILabel alloc] initWithFrame:CGRectMake(240, 75, 60, 10)];
+        dataLbl.text = data.datatime;
+        dataLbl.font = [UIFont fontWithName:@"AppleGothic" size:9];
+        dataLbl.alpha = 0.6f;
+        dataLbl.backgroundColor = [UIColor clearColor];
+        dataLbl.numberOfLines = 1;
+        [cell.contentView addSubview:dataLbl];
+        
+        
         //}
         return cell;
     } else {
