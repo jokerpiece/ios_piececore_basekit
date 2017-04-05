@@ -142,14 +142,15 @@
     UIFont *font = [UIFont fontWithName:@"GeezaPro" size:16];
     
     NSDictionary *attributes =@{NSFontAttributeName:font,
-                                [NSNumber numberWithFloat:custamLetterSpacing]:NSKernAttributeName};
+                                NSKernAttributeName:[NSNumber numberWithFloat:custamLetterSpacing]
+                                };
     
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:textLbl.text attributes:attributes];
     textLbl.attributedText = attributedText;
     
     CGSize textSize = [textLbl.text
                        boundingRectWithSize:CGSizeMake(self.viewSize.width - (img_viewSize_width * 2), CGFLOAT_MAX)
-                       options:(NSStringDrawingUsesLineFragmentOrigin)
+                       options:NSStringDrawingUsesLineFragmentOrigin
                        attributes:attributes
                        context:nil].size;
     
