@@ -128,7 +128,7 @@
     self.scroll.bounces = NO;
     self.pageSize = (int)self.couponRecipient.list.count; // ページ数
     CGFloat width = self.viewSize.width;
-    CGFloat height = self.viewSize.height - NavigationHight - TabbarHight;
+    CGFloat height = self.viewSize.height - NavigationHight - TabbarHight - self.selectTab.frame.size.height;
     self.scroll.frame = self.view.bounds;
     self.scroll.showsHorizontalScrollIndicator = YES;
     self.scroll.pagingEnabled = YES;
